@@ -1,11 +1,14 @@
 import React from "react";
+import { Container } from "reactstrap";
 import "./App.css";
+import { Routes } from "./Routes";
 
 function App() {
 	return (
-		<div className="App">
-			<h1>Hey Malaysian! Welcome to Covid-19 Realtime Result</h1>
-		</div>
+		<Container>
+			<h1>Covid-19 Live Result</h1>
+			<Routes />
+		</Container>
 	);
 }
 
