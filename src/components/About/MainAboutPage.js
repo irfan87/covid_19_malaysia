@@ -4,7 +4,7 @@ import { Container } from "reactstrap";
 export const MainAboutPage = () => {
 	return (
 		<Container>
-			<h2>About</h2>
+			<h2>About Page</h2>
 		</Container>
 	);
 };
