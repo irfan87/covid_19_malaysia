@@ -1,0 +1,9 @@
+.card-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: baseline;
+	height: 12px;
+	margin: 20px;
+	padding: 3px;
+	text-align: center;
+}

@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Table } from "reactstrap";
+import {
+	Card,
+	CardBody,
+	CardTitle,
+	Col,
+	Container,
+	Row,
+	Table,
+} from "reactstrap";
 import { BallZigZagDeflect } from "react-pure-loaders";
 import Moment from "moment";
 import axios from "axios";
+
+import "./MainDashboard.css";
 
 const useFetch = (url) => {
 	const [data, setData] = useState([]);
@@ -14,6 +24,7 @@ const useFetch = (url) => {
 			const response = await axios(url);
 
 			setData(response.data);
+
 			setLoading(false);
 		};
 
@@ -25,11 +36,11 @@ const useFetch = (url) => {
 
 export const MainDashboardPage = () => {
 	const { data, loading } = useFetch(
-		"https://api.apify.com/v2/datasets/7Fdb90FMDLZir2ROo/items?format=json&clean=1"
+		"https://api.apify.com/v2/key-value-stores/6t65lJVfs3d8s6aKc/records/LATEST?disableRedirect=true"
 	);
 
 	return (
-		<Container>
+		<>
 			<h2>Result</h2>
 			{loading ? (
 				<Container>
@@ -50,31 +61,47 @@ export const MainDashboardPage = () => {
 				</Container>
 			) : (
 				// <div>Fetching the current COVID-19 Result....</div>
-				<Table>
-					<thead>
-						<th>Date / Time</th>
-						<th>Positive</th>
-						<th>Negative</th>
-						<th>Pending</th>
-						<th>Recovered</th>
-					</thead>
-					<tbody>
-						{data.map((result) => (
-							<tr key={result["lastUpdatedAtApify"]}>
-								<td>
-									{Moment(result["lastUpdatedAtApify"]).format(
-										"MM-DD-YYYY hh:mm:ss a"
-									)}
-								</td>
-								<td>{result["testedPositive"]}</td>
-								<td>{result["testedNegative"]}</td>
-								<td>{result["testedPending"]}</td>
-								<td>{result["testedTotal"]}</td>
-							</tr>
-						))}
-					</tbody>
-				</Table>
+				<>
+					Date:{" "}
+					{Moment(data["lastUpdatedAtApify"]).format("MM-DD-YYYY hh:mm:ss a")}
+					{/* <Row> */}
+					<Container className="card-container">
+						<Col md="3">
+							<Card>
+								<CardTitle>
+									<h5>Positive</h5>
+								</CardTitle>
+								<CardBody>{data["testedPositive"]}</CardBody>
+							</Card>
+						</Col>
+						<Col md="3">
+							<Card>
+								<CardTitle>Recovered</CardTitle>
+								<CardBody>{data["recovered"]}</CardBody>
+							</Card>
+						</Col>
+						<Col md="3">
+							<Card>
+								<CardTitle>In ICU</CardTitle>
+								<CardBody>{data["inICU"]}</CardBody>
+							</Card>
+						</Col>
+						<Col md="3">
+							<Card>
+								<CardTitle>Active Case</CardTitle>
+								<CardBody>{data["activeCases"]}</CardBody>
+							</Card>
+						</Col>
+						<Col md="3">
+							<Card>
+								<CardTitle>Deceased</CardTitle>
+								<CardBody>{data["deceased"]}</CardBody>
+							</Card>
+						</Col>
+					</Container>
+					{/* </Row> */}
+				</>
 			)}
-		</Container>
+		</>
 	);
 };
