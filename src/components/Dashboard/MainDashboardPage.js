@@ -36,9 +36,6 @@ export const MainDashboardPage = () => {
 		"https://api.apify.com/v2/key-value-stores/6t65lJVfs3d8s6aKc/records/LATEST?disableRedirect=true"
 	);
 
-	// fetch all current result of Covid-19, started from day 1 to this date
-	const {allData, dataLoading} = useFetch("https://api.apify.com/v2/datasets/7Fdb90FMDLZir2ROo/items?format=json&clean=1");
-
 	return (
 		<>
 			<h2>Result</h2>
