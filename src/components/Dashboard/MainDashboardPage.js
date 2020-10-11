@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import {
-	Card,
-	CardBody,
-	CardTitle,
 	Col,
 	Container,
 	Row,
-	Table,
 } from "reactstrap";
 import { BallZigZagDeflect } from "react-pure-loaders";
 import Moment from "moment";
 import axios from "axios";
 
 import "./MainDashboard.css";
+import { CovidCardBody } from "./CovidCardBody";
 
 const useFetch = (url) => {
 	const [data, setData] = useState([]);
@@ -62,44 +59,17 @@ export const MainDashboardPage = () => {
 			) : (
 				// <div>Fetching the current COVID-19 Result....</div>
 				<>
-					Date:{" "}
-					{Moment(data["lastUpdatedAtApify"]).format("MM-DD-YYYY hh:mm:ss a")}
-					{/* <Row> */}
-					<Container className="card-container">
-						<Col md="3">
-							<Card>
-								<CardTitle>
-									<h5>Positive</h5>
-								</CardTitle>
-								<CardBody>{data["testedPositive"]}</CardBody>
-							</Card>
-						</Col>
-						<Col md="3">
-							<Card>
-								<CardTitle>Recovered</CardTitle>
-								<CardBody>{data["recovered"]}</CardBody>
-							</Card>
-						</Col>
-						<Col md="3">
-							<Card>
-								<CardTitle>In ICU</CardTitle>
-								<CardBody>{data["inICU"]}</CardBody>
-							</Card>
-						</Col>
-						<Col md="3">
-							<Card>
-								<CardTitle>Active Case</CardTitle>
-								<CardBody>{data["activeCases"]}</CardBody>
-							</Card>
-						</Col>
-						<Col md="3">
-							<Card>
-								<CardTitle>Deceased</CardTitle>
-								<CardBody>{data["deceased"]}</CardBody>
-							</Card>
-						</Col>
-					</Container>
-					{/* </Row> */}
+					Current Result for {" "}
+					{Moment(data["lastUpdatedAtApify"]).format("DD-MM-YYYY hh:mm:ss a")}
+					<div className='card-container'>
+						<CovidCardBody 
+							testedPositive={data['testedPositive']} 
+							recovered={data['recovered']}
+							inICU={data['inICU']}
+							activeCases={data['activeCases']}
+							deceased={data['deceased']}
+						/>
+					</div>
 				</>
 			)}
 		</>
