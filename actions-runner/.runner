@@ -1,9 +1,0 @@
-﻿{
-  "agentId": 2,
-  "agentName": "covid-19-react-app",
-  "poolId": 1,
-  "poolName": "Default",
-  "serverUrl": "https://pipelines.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS",
-  "gitHubUrl": "https://github.com/irfan87/covid_19_malaysia",
-  "workFolder": "covid-19-react-app"
-}
