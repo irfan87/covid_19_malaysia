@@ -1,0 +1,3032 @@
+[2020-10-12 14:42:27Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-10-12 14:42:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:27Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials'
+[2020-10-12 14:42:27Z INFO Worker] Version: 2.273.5
+[2020-10-12 14:42:27Z INFO Worker] Commit: a79bab4b3c993a205a2d73d2b618299d8a96bd26
+[2020-10-12 14:42:27Z INFO Worker] Culture: en-MY
+[2020-10-12 14:42:27Z INFO Worker] UI Culture: en-US
+[2020-10-12 14:42:27Z INFO Worker] Waiting to receive the job message from the channel.
+[2020-10-12 14:42:27Z INFO Worker] Message received.
+[2020-10-12 14:42:28Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/node.js.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "condition": "success()",
+      "id": "2ad33848-49ea-50c8-ba3c-6d56baf65020",
+      "name": "actionscheckout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v1",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 3,
+        "file": 1,
+        "line": 21,
+        "col": 13,
+        "expr": "format('Use Node.js {0}', matrix.node-version)"
+      },
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 24,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 24,
+              "col": 9,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 24,
+              "col": 23,
+              "expr": "matrix.node-version"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "6e18ae3a-0002-5382-d895-85ba37ca0ed3",
+      "name": "actionssetup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 25,
+              "col": 12,
+              "lit": "npm i"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "6df6c8b2-37e7-567b-dfd0-96a16ebefadf",
+      "name": "run1"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 12,
+              "lit": "npm run build --if-present"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "2091dd97-b57a-59d7-148a-fbbcbde32eec",
+      "name": "run2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 12,
+              "lit": "npm test"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d80f8feb-80b4-51bd-c876-203cada35044",
+      "name": "run3"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system": {
+      "value": "actions"
+    },
+    "system.hosttype": {
+      "value": "actions"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.collectionId": {
+      "value": "d3ff0eff-ccad-4fdb-8874-67fb33bc94aa"
+    },
+    "system.collectionUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS/"
+    },
+    "system.taskDefinitionsUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS/"
+    },
+    "system.pipelineStartTime": {
+      "value": "2020-10-12 14:42:25+00:00"
+    },
+    "system.definitionId": {
+      "value": "3"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UseContextNameForGITHUBACTION": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "3"
+    },
+    "build.containerId": {
+      "value": "484965"
+    },
+    "system.definitionName": {
+      "value": "covid_19_malaysia"
+    },
+    "system.planId": {
+      "value": "4bf8537a-93a9-46e5-8b80-9b666e9f1338"
+    },
+    "system.timelineId": {
+      "value": "4bf8537a-93a9-46e5-8b80-9b666e9f1338"
+    },
+    "system.stageDisplayName": {
+      "value": "__default"
+    },
+    "system.stageId": {
+      "value": "96ac2280-8cb4-5df5-99de-dd2da759617d"
+    },
+    "system.stageName": {
+      "value": "__default"
+    },
+    "system.stageAttempt": {
+      "value": "1"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build._14_x"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build (14.x)"
+    },
+    "system.jobId": {
+      "value": "006c7e6f-00a1-57ff-4d9c-5871960fc9e4"
+    },
+    "system.jobName": {
+      "value": "_14_x"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 12,
+    "planId": "4bf8537a-93a9-46e5-8b80-9b666e9f1338",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/3",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "covid_19_malaysia"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "irfan87"
+    }
+  },
+  "timeline": {
+    "id": "4bf8537a-93a9-46e5-8b80-9b666e9f1338",
+    "changeId": 6,
+    "location": null
+  },
+  "jobId": "006c7e6f-00a1-57ff-4d9c-5871960fc9e4",
+  "jobDisplayName": "build (14.x)",
+  "jobName": "_14_x",
+  "requestId": 2,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "d3ff0eff-ccad-4fdb-8874-67fb33bc94aa",
+          "ServerName": "DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS/"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/master"
+        },
+        {
+          "k": "sha",
+          "v": "c11905ebc7cf3214db4bd57ae6ba5e6fc5ba9983"
+        },
+        {
+          "k": "repository",
+          "v": "irfan87/covid_19_malaysia"
+        },
+        {
+          "k": "repository_owner",
+          "v": "irfan87"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/irfan87/covid_19_malaysia.git"
+        },
+        {
+          "k": "run_id",
+          "v": "302343439"
+        },
+        {
+          "k": "run_number",
+          "v": "1"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "actor",
+          "v": "irfan87"
+        },
+        {
+          "k": "workflow",
+          "v": "Node.js CI"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "c11905ebc7cf3214db4bd57ae6ba5e6fc5ba9983"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "611c44d9aae01d7341de449a40ea692d802a81af"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "nerve2009@yahoo.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Ahmad Irfan Mohammad Shukri"
+                              },
+                              {
+                                "k": "username",
+                                "v": "irfan87"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noreply@github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "GitHub"
+                              },
+                              {
+                                "k": "username",
+                                "v": "web-flow"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "c11905ebc7cf3214db4bd57ae6ba5e6fc5ba9983"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Create node.js.yml"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2020-10-12T22:19:40+08:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "9fbdeda51d061a4278ac51ad72cefba4ecc32d77"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/irfan87/covid_19_malaysia/commit/c11905ebc7cf3214db4bd57ae6ba5e6fc5ba9983"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/irfan87/covid_19_malaysia/compare/611c44d9aae0...c11905ebc7cf"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "nerve2009@yahoo.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Ahmad Irfan Mohammad Shukri"
+                          },
+                          {
+                            "k": "username",
+                            "v": "irfan87"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noreply@github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "GitHub"
+                          },
+                          {
+                            "k": "username",
+                            "v": "web-flow"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "c11905ebc7cf3214db4bd57ae6ba5e6fc5ba9983"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Create node.js.yml"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2020-10-12T22:19:40+08:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "9fbdeda51d061a4278ac51ad72cefba4ecc32d77"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/irfan87/covid_19_malaysia/commit/c11905ebc7cf3214db4bd57ae6ba5e6fc5ba9983"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "nerve2009@yahoo.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "irfan87"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/master"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/irfan87/covid_19_malaysia.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1601981990.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "irfan87/covid_19_malaysia"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/irfan87/covid_19_malaysia.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/irfan87/covid_19_malaysia"
+                    },
+                    {
+                      "k": "id",
+                      "v": 301697198.0
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "covid_19_malaysia"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDEwOlJlcG9zaXRvcnkzMDE2OTcxOTg="
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars0.githubusercontent.com/u/2528276?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "nerve2009@yahoo.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/irfan87/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/irfan87/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/irfan87/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/irfan87/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/irfan87"
+                          },
+                          {
+                            "k": "id",
+                            "v": 2528276.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "irfan87"
+                          },
+                          {
+                            "k": "name",
+                            "v": "irfan87"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjI1MjgyNzY="
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/irfan87/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/irfan87/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/irfan87/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/irfan87/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/irfan87/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/irfan87"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1602512381.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 558.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:irfan87/covid_19_malaysia.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/irfan87/covid_19_malaysia"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/teams"
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/irfan87/covid_19_malaysia/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2020-10-11T16:29:50Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/irfan87/covid_19_malaysia"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars0.githubusercontent.com/u/2528276?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/irfan87/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/irfan87/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/irfan87/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/irfan87/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/irfan87"
+                    },
+                    {
+                      "k": "id",
+                      "v": 2528276.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "irfan87"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjI1MjgyNzY="
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/irfan87/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/irfan87/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/irfan87/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/irfan87/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/irfan87/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/irfan87"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "matrix": {
+      "t": 2,
+      "d": [
+        {
+          "k": "node-version",
+          "v": "14.x"
+        }
+      ]
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2020-10-12 14:42:28Z INFO JobRunner] Job ID 006c7e6f-00a1-57ff-4d9c-5871960fc9e4
+[2020-10-12 14:42:28Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS/
+[2020-10-12 14:42:28Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-10-12 14:42:28Z INFO Worker] Listening for cancel message from the channel.
+[2020-10-12 14:42:28Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2020-10-12 14:42:29Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-10-12 14:42:29Z INFO JobServerQueue] Start process web console line queue.
+[2020-10-12 14:42:29Z INFO JobServerQueue] Start process file upload queue.
+[2020-10-12 14:42:29Z INFO JobServerQueue] Start process timeline update queue.
+[2020-10-12 14:42:29Z INFO ExecutionContext] Initialize GitHub context
+[2020-10-12 14:42:29Z INFO ExecutionContext] Initialize Env context
+[2020-10-12 14:42:29Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin\Runner.Worker.dll
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO ConfigurationStore] binPath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO ConfigurationStore] RootFolder: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known config file 'Runner': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.runner'
+[2020-10-12 14:42:29Z INFO ConfigurationStore] ConfigFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.runner
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials'
+[2020-10-12 14:42:29Z INFO ConfigurationStore] CredFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_migrated'
+[2020-10-12 14:42:29Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_migrated
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known config file 'Service': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.service'
+[2020-10-12 14:42:29Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.service
+[2020-10-12 14:42:29Z INFO ConfigurationStore] Read setting file: 321 chars
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:29Z INFO JobRunner] Starting the job execution context.
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO JobRunner] Validating directory permissions for: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Tools': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_tool'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:29Z INFO JobRunner] Getting job extension.
+[2020-10-12 14:42:29Z INFO JobRunner] Initialize job. Getting all job steps.
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.setup_info'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_PipelineMapping\irfan87/covid_19_malaysia\PipelineFolder.json
+[2020-10-12 14:42:29Z INFO PipelineDirectoryManager] Updating job run properties.
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO JobExtension] Downloading actions
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:29Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:30Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:30Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/a81bbbf8298c0fa03ea29cdc473d45769f953675' into C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\_temp_755d243f-aebd-4e34-90ae-7b277edc474c\0f45fe02-f793-4fd9-aa88-17b58db37ab3.zip.
+[2020-10-12 14:42:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '135288c7-164f-443a-9244-9cc9acf4c08d', success rate: 1/1.
+[2020-10-12 14:42:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '135288c7-164f-443a-9244-9cc9acf4c08d', success rate: 1/1.
+[2020-10-12 14:42:34Z INFO ActionManager] Finished getting action repository.
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:34Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:34Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/zipball/56899e050abffc08c2b3b61f3ec6a79a9dc3223d' into C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\_temp_56c5a0cf-33ca-4cbf-9c62-3e98aed6408d\081df302-7854-47fc-bdc6-2bbbb22fed35.zip.
+[2020-10-12 14:42:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record '135288c7-164f-443a-9244-9cc9acf4c08d', success rate: 1/1.
+[2020-10-12 14:42:35Z INFO ActionManager] Finished getting action repository.
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "outputs-attributes",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node12-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "step-env"
+]
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-10-12 14:42:35Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManager] Load action that reference repository from 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\checkout\v2'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-10-12 14:42:35Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-10-12 14:42:35Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-10-12 14:42:35Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Ignore action property author.
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment and add it to the PATH, additionally providing proxy support",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 14,
+          "lit": "10.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 11,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2020-10-12 14:42:35Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManager] Load action that reference repository from 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\setup-node\v1'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Ignore action property author.
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment and add it to the PATH, additionally providing proxy support",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 14,
+          "lit": "10.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 11,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2020-10-12 14:42:35Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-10-12 14:42:35Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-10-12 14:42:35Z INFO ActionManager] Action post node.js file: N/A.
+[2020-10-12 14:42:35Z INFO JobExtension] Adding .
+[2020-10-12 14:42:35Z INFO JobExtension] Adding .
+[2020-10-12 14:42:35Z INFO JobExtension] Adding .
+[2020-10-12 14:42:35Z INFO JobExtension] Adding .
+[2020-10-12 14:42:35Z INFO JobExtension] Adding .
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:35Z INFO JobExtension] Total accessible running process: 303.
+[2020-10-12 14:42:35Z INFO JobRunner] Total job steps: 5.
+[2020-10-12 14:42:35Z INFO JobRunner] Run all job steps.
+[2020-10-12 14:42:35Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v2'
+[2020-10-12 14:42:35Z INFO StepsRunner] Initialize Env context for step
+[2020-10-12 14:42:35Z INFO StepsRunner] Evaluating: success()
+[2020-10-12 14:42:35Z INFO StepsRunner] Result: true
+[2020-10-12 14:42:35Z INFO StepsRunner] Starting the step.
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO StepsRunner] Which: 'chcp'
+[2020-10-12 14:42:35Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper] Process started with process id 17308, waiting for process exit.
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:35Z INFO ProcessInvokerWrapper] Finished process 17308 with exit code 0, and elapsed time 00:00:00.0368050.
+[2020-10-12 14:42:35Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManager] Load action that reference repository from 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\checkout\v2'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-10-12 14:42:35Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-10-12 14:42:35Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-10-12 14:42:35Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2020-10-12 14:42:35Z INFO ExecutionContext] Reserve record order 7 to 12 for post job actions.
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:35Z INFO ActionRunner] Write event payload to C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\_github_workflow\event.json
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:35Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:35Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "irfan87/covid_19_malaysia"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2020-10-12 14:42:35Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2020-10-12 14:42:35Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command error
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-10-12 14:42:35Z INFO ActionCommandManager] Register action command extension for command group
+[2020-10-12 14:42:36Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-10-12 14:42:36Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-10-12 14:42:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:36Z INFO HostContext] Well known directory 'Externals': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\externals'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\externals\node12\bin\node.exe'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\checkout\v2\dist/index.js"'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\covid_19_malaysia\covid_19_malaysia'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:42:36Z INFO ProcessInvokerWrapper] Process started with process id 14864, waiting for process exit.
+[2020-10-12 14:42:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:37Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-10-12 14:42:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:45Z INFO AddMaskCommandExtension] Add new secret mask with length of 80
+[2020-10-12 14:42:46Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] Finished process 14864 with exit code 0, and elapsed time 00:00:17.0034036.
+[2020-10-12 14:42:53Z INFO StepsRunner] Step result: 
+[2020-10-12 14:42:53Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-10-12 14:42:53Z INFO StepsRunner] Current state: job state = ''
+[2020-10-12 14:42:53Z INFO StepsRunner] Processing step: DisplayName='Use Node.js 14.x'
+[2020-10-12 14:42:53Z INFO StepsRunner] Initialize Env context for step
+[2020-10-12 14:42:53Z INFO StepsRunner] Evaluating: success()
+[2020-10-12 14:42:53Z INFO StepsRunner] Result: true
+[2020-10-12 14:42:53Z INFO StepsRunner] Starting the step.
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:53Z INFO StepsRunner] Which: 'chcp'
+[2020-10-12 14:42:53Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] Process started with process id 836, waiting for process exit.
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] Finished process 836 with exit code 0, and elapsed time 00:00:00.0303883.
+[2020-10-12 14:42:53Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:53Z INFO ActionManager] Load action that reference repository from 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\setup-node\v1'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:42:53Z INFO ActionManifestManager] Ignore action property author.
+[2020-10-12 14:42:53Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment and add it to the PATH, additionally providing proxy support",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 14,
+          "lit": "10.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 11,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2020-10-12 14:42:53Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-10-12 14:42:53Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-10-12 14:42:53Z INFO ActionManager] Action post node.js file: N/A.
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:53Z INFO ActionRunner] Write event payload to C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\_github_workflow\event.json
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:53Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-10-12 14:42:53Z INFO ActionManifestManager] Input 'always-auth': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 7,
+  "col": 14,
+  "lit": "false"
+}
+[2020-10-12 14:42:53Z INFO ActionManifestManager] Input 'registry-url': default value evaluate result: ""
+[2020-10-12 14:42:53Z INFO ActionManifestManager] Input 'scope': default value evaluate result: ""
+[2020-10-12 14:42:53Z INFO ActionManifestManager] Input 'version': default value evaluate result: ""
+[2020-10-12 14:42:53Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command error
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command group
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-10-12 14:42:53Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:53Z INFO HostContext] Well known directory 'Externals': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\externals'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\externals\node12\bin\node.exe'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\setup-node\v1\dist/index.js"'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\covid_19_malaysia\covid_19_malaysia'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:42:53Z INFO ProcessInvokerWrapper] Process started with process id 14024, waiting for process exit.
+[2020-10-12 14:42:53Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2020-10-12 14:42:53Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2020-10-12 14:42:54Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-10-12 14:42:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] Finished process 14024 with exit code 0, and elapsed time 00:00:03.3920267.
+[2020-10-12 14:42:56Z INFO StepsRunner] Step result: 
+[2020-10-12 14:42:56Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-10-12 14:42:56Z INFO StepsRunner] Current state: job state = ''
+[2020-10-12 14:42:56Z INFO StepsRunner] Processing step: DisplayName='Run npm i'
+[2020-10-12 14:42:56Z INFO StepsRunner] Initialize Env context for step
+[2020-10-12 14:42:56Z INFO StepsRunner] Evaluating: success()
+[2020-10-12 14:42:56Z INFO StepsRunner] Result: true
+[2020-10-12 14:42:56Z INFO StepsRunner] Starting the step.
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:56Z INFO StepsRunner] Which: 'chcp'
+[2020-10-12 14:42:56Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] Process started with process id 15044, waiting for process exit.
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] Finished process 15044 with exit code 0, and elapsed time 00:00:00.0302936.
+[2020-10-12 14:42:56Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:56Z INFO ActionRunner] Write event payload to C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\_github_workflow\event.json
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:56Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-10-12 14:42:56Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command error
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command group
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-10-12 14:42:56Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-10-12 14:42:56Z INFO ScriptHandler] Which: 'pwsh'
+[2020-10-12 14:42:56Z INFO ScriptHandler] Not found.
+[2020-10-12 14:42:56Z INFO ScriptHandler] Defaulting to powershell
+[2020-10-12 14:42:56Z INFO ScriptHandler] Which: 'powershell'
+[2020-10-12 14:42:56Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:42:56Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:42:56Z INFO ScriptHandler] Which: 'pwsh'
+[2020-10-12 14:42:56Z INFO ScriptHandler] Not found.
+[2020-10-12 14:42:56Z INFO ScriptHandler] Defaulting to powershell
+[2020-10-12 14:42:56Z INFO ScriptHandler] Which: 'powershell'
+[2020-10-12 14:42:56Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\0184febf-5ce4-42db-b7cf-a9091f768495.ps1'"'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\covid_19_malaysia\covid_19_malaysia'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:42:56Z INFO ProcessInvokerWrapper] Process started with process id 19044, waiting for process exit.
+[2020-10-12 14:42:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2020-10-12 14:42:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2020-10-12 14:42:58Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-10-12 14:43:36Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2020-10-12 14:44:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2020-10-12 14:44:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2020-10-12 14:44:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] Finished process 19044 with exit code 0, and elapsed time 00:01:25.9493056.
+[2020-10-12 14:44:22Z INFO StepsRunner] Step result: 
+[2020-10-12 14:44:22Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-10-12 14:44:22Z INFO StepsRunner] Current state: job state = ''
+[2020-10-12 14:44:22Z INFO StepsRunner] Processing step: DisplayName='Run npm run build --if-present'
+[2020-10-12 14:44:22Z INFO StepsRunner] Initialize Env context for step
+[2020-10-12 14:44:22Z INFO StepsRunner] Evaluating: success()
+[2020-10-12 14:44:22Z INFO StepsRunner] Result: true
+[2020-10-12 14:44:22Z INFO StepsRunner] Starting the step.
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:44:22Z INFO StepsRunner] Which: 'chcp'
+[2020-10-12 14:44:22Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] Process started with process id 10496, waiting for process exit.
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] Finished process 10496 with exit code 0, and elapsed time 00:00:00.0332532.
+[2020-10-12 14:44:22Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:44:22Z INFO ActionRunner] Write event payload to C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\_github_workflow\event.json
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:44:22Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-10-12 14:44:22Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command error
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command group
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-10-12 14:44:22Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-10-12 14:44:22Z INFO ScriptHandler] Which: 'pwsh'
+[2020-10-12 14:44:22Z INFO ScriptHandler] Not found.
+[2020-10-12 14:44:22Z INFO ScriptHandler] Defaulting to powershell
+[2020-10-12 14:44:22Z INFO ScriptHandler] Which: 'powershell'
+[2020-10-12 14:44:22Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:44:22Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:44:22Z INFO ScriptHandler] Which: 'pwsh'
+[2020-10-12 14:44:22Z INFO ScriptHandler] Not found.
+[2020-10-12 14:44:22Z INFO ScriptHandler] Defaulting to powershell
+[2020-10-12 14:44:22Z INFO ScriptHandler] Which: 'powershell'
+[2020-10-12 14:44:22Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\aba68e36-c398-4573-ab3d-28bbd03d7fda.ps1'"'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\covid_19_malaysia\covid_19_malaysia'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:44:22Z INFO ProcessInvokerWrapper] Process started with process id 8124, waiting for process exit.
+[2020-10-12 14:44:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2020-10-12 14:44:23Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-10-12 14:44:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2020-10-12 14:44:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2020-10-12 14:44:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] Finished process 8124 with exit code 0, and elapsed time 00:00:52.8887609.
+[2020-10-12 14:45:15Z INFO StepsRunner] Step result: 
+[2020-10-12 14:45:15Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-10-12 14:45:15Z INFO StepsRunner] Current state: job state = ''
+[2020-10-12 14:45:15Z INFO StepsRunner] Processing step: DisplayName='Run npm test'
+[2020-10-12 14:45:15Z INFO StepsRunner] Initialize Env context for step
+[2020-10-12 14:45:15Z INFO StepsRunner] Evaluating: success()
+[2020-10-12 14:45:15Z INFO StepsRunner] Result: true
+[2020-10-12 14:45:15Z INFO StepsRunner] Starting the step.
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:15Z INFO StepsRunner] Which: 'chcp'
+[2020-10-12 14:45:15Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] Process started with process id 17460, waiting for process exit.
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] Finished process 17460 with exit code 0, and elapsed time 00:00:00.0367685.
+[2020-10-12 14:45:15Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:45:15Z INFO ActionRunner] Write event payload to C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\_github_workflow\event.json
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:45:15Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-10-12 14:45:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2020-10-12 14:45:15Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command error
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command group
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-10-12 14:45:15Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-10-12 14:45:15Z INFO ScriptHandler] Which: 'pwsh'
+[2020-10-12 14:45:15Z INFO ScriptHandler] Not found.
+[2020-10-12 14:45:15Z INFO ScriptHandler] Defaulting to powershell
+[2020-10-12 14:45:15Z INFO ScriptHandler] Which: 'powershell'
+[2020-10-12 14:45:15Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:15Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:45:15Z INFO ScriptHandler] Which: 'pwsh'
+[2020-10-12 14:45:15Z INFO ScriptHandler] Not found.
+[2020-10-12 14:45:15Z INFO ScriptHandler] Defaulting to powershell
+[2020-10-12 14:45:15Z INFO ScriptHandler] Which: 'powershell'
+[2020-10-12 14:45:15Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\88139eaa-f957-4648-ad89-941a8adf57ec.ps1'"'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\covid_19_malaysia\covid_19_malaysia'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:45:15Z INFO ProcessInvokerWrapper] Process started with process id 14864, waiting for process exit.
+[2020-10-12 14:45:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd80f8feb-80b4-51bd-c876-203cada35044', success rate: 1/1.
+[2020-10-12 14:45:16Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-10-12 14:45:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd80f8feb-80b4-51bd-c876-203cada35044', success rate: 1/1.
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] Finished process 14864 with exit code 1, and elapsed time 00:00:16.7914009.
+[2020-10-12 14:45:32Z INFO StepsRunner] Step result: Failed
+[2020-10-12 14:45:32Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2020-10-12 14:45:32Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-10-12 14:45:32Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v2'
+[2020-10-12 14:45:32Z INFO StepsRunner] Initialize Env context for step
+[2020-10-12 14:45:32Z INFO StepsRunner] Evaluating: always()
+[2020-10-12 14:45:32Z INFO StepsRunner] Result: true
+[2020-10-12 14:45:32Z INFO StepsRunner] Starting the step.
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:32Z INFO StepsRunner] Which: 'chcp'
+[2020-10-12 14:45:32Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] Process started with process id 544, waiting for process exit.
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] Finished process 544 with exit code 0, and elapsed time 00:00:00.0302588.
+[2020-10-12 14:45:32Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:45:32Z INFO ActionManager] Load action that reference repository from 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\checkout\v2'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Actions': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions'
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-10-12 14:45:32Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-10-12 14:45:32Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-10-12 14:45:32Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:45:32Z INFO ActionRunner] Write event payload to C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp\_github_workflow\event.json
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Temp': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp'
+[2020-10-12 14:45:32Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "irfan87/covid_19_malaysia"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2020-10-12 14:45:32Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2020-10-12 14:45:32Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command error
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command group
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-10-12 14:45:32Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:32Z INFO HostContext] Well known directory 'Externals': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\externals'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\externals\node12\bin\node.exe'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_actions\actions\checkout\v2\dist/index.js"'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\covid_19_malaysia\covid_19_malaysia'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-10-12 14:45:32Z INFO ProcessInvokerWrapper] Process started with process id 15088, waiting for process exit.
+[2020-10-12 14:45:33Z INFO JobServerQueue] Try to append 2 batches web console lines for record 'd80f8feb-80b4-51bd-c876-203cada35044', success rate: 2/2.
+[2020-10-12 14:45:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f20fadb0-8268-4ce0-a09b-0ae05b2f19d3', success rate: 1/1.
+[2020-10-12 14:45:34Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-10-12 14:45:38Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2020-10-12 14:45:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f20fadb0-8268-4ce0-a09b-0ae05b2f19d3', success rate: 1/1.
+[2020-10-12 14:45:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f20fadb0-8268-4ce0-a09b-0ae05b2f19d3', success rate: 1/1.
+[2020-10-12 14:45:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:40Z INFO ProcessInvokerWrapper] Finished process 15088 with exit code 0, and elapsed time 00:00:07.7188281.
+[2020-10-12 14:45:40Z INFO StepsRunner] Step result: 
+[2020-10-12 14:45:40Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-10-12 14:45:40Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-10-12 14:45:40Z INFO JobRunner] Finalize job.
+[2020-10-12 14:45:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:45:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:45:40Z INFO HostContext] Well known directory 'Diag': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\_diag'
+[2020-10-12 14:45:40Z INFO JobExtension] Total accessible running process: 306.
+[2020-10-12 14:45:40Z INFO JobExtension] Inspecting process environment variables. PID: 2160 (SearchProtocolHost)
+[2020-10-12 14:45:40Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2020-10-12 14:45:40Z INFO JobExtension] Inspecting process environment variables. PID: 20376 (SearchFilterHost)
+[2020-10-12 14:45:40Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2020-10-12 14:45:40Z INFO JobExtension] Inspecting process environment variables. PID: 18152 (ProcInfo)
+[2020-10-12 14:45:40Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2020-10-12 14:45:40Z INFO JobExtension] Inspecting process environment variables. PID: 14940 (chrome)
+[2020-10-12 14:45:40Z INFO JobExtension] Inspecting process environment variables. PID: 19956 (chrome)
+[2020-10-12 14:45:40Z INFO JobRunner] Job result after all job steps finish: Failed
+[2020-10-12 14:45:40Z INFO JobRunner] Completing the job execution context.
+[2020-10-12 14:45:40Z INFO JobRunner] Shutting down the job server queue.
+[2020-10-12 14:45:40Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2020-10-12 14:45:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f20fadb0-8268-4ce0-a09b-0ae05b2f19d3', success rate: 1/1.
+[2020-10-12 14:45:41Z INFO JobServerQueue] All queue process task stopped.
+[2020-10-12 14:45:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95e0eb9d-3042-4858-8182-63601641261c', success rate: 1/1.
+[2020-10-12 14:45:41Z INFO JobServerQueue] Web console line queue drained.
+[2020-10-12 14:45:41Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2020-10-12 14:45:43Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2020-10-12 14:45:43Z INFO JobServerQueue] File upload queue drained.
+[2020-10-12 14:45:43Z INFO JobServerQueue] Timeline update queue drained.
+[2020-10-12 14:45:43Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2020-10-12 14:45:43Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\covid-19-react-app\_temp
+[2020-10-12 14:45:43Z INFO JobRunner] Raising job completed event.
+[2020-10-12 14:45:44Z INFO Worker] Job completed.

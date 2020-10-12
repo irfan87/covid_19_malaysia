@@ -65,11 +65,11 @@ export const MainDashboardPage = () => {
 					{Moment(data["lastUpdatedAtApify"]).format("DD-MM-YYYY")} {" "} at {" "} {Moment(data['lastUpdatedAtApify']).startOf('minute').fromNow()}
 					<div className='card-container'>
 						<CovidCardBody 
-							testedPositive={data['testedPositive']} 
-							recovered={data['recovered']}
-							inICU={data['inICU']}
-							activeCases={data['activeCases']}
-							deceased={data['deceased']}
+							testedPositive={data.testedPositive} 
+							recovered={data.recovered}
+							inICU={data.inICU}
+							activeCases={data.activeCases}
+							deceased={data.deceased}
 						/>
 					</div>
 				</>

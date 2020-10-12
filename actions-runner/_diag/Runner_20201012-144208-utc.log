@@ -1,0 +1,158 @@
+[2020-10-12 14:42:08Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-10-12 14:42:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:08Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials'
+[2020-10-12 14:42:09Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2020-10-12 14:42:09Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19041.
+[2020-10-12 14:42:09Z INFO Listener] Version: 2.273.5
+[2020-10-12 14:42:09Z INFO Listener] Commit: a79bab4b3c993a205a2d73d2b618299d8a96bd26
+[2020-10-12 14:42:09Z INFO Listener] Culture: en-MY
+[2020-10-12 14:42:09Z INFO Listener] UI Culture: en-US
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO Listener] Validating directory permissions for: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO CommandLineParser] Parse
+[2020-10-12 14:42:09Z INFO CommandLineParser] Parsing 1 args
+[2020-10-12 14:42:09Z INFO CommandLineParser] parsing argument
+[2020-10-12 14:42:09Z INFO CommandLineParser] HasArgs: False
+[2020-10-12 14:42:09Z INFO CommandLineParser] Adding Command: run
+[2020-10-12 14:42:09Z INFO Listener] Arguments parsed
+[2020-10-12 14:42:09Z INFO Runner] ExecuteCommand
+[2020-10-12 14:42:09Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin\Runner.Listener.dll
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] binPath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] RootFolder: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO HostContext] Well known config file 'Runner': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.runner'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] ConfigFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.runner
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] CredFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_migrated'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_migrated
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO HostContext] Well known config file 'Service': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.service'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.service
+[2020-10-12 14:42:09Z INFO CommandSettings] Flag 'help': 'False'
+[2020-10-12 14:42:09Z INFO CommandSettings] Flag 'version': 'False'
+[2020-10-12 14:42:09Z INFO CommandSettings] Flag 'commit': 'False'
+[2020-10-12 14:42:09Z INFO CommandSettings] Command 'configure': 'False'
+[2020-10-12 14:42:09Z INFO CommandSettings] Command 'remove': 'False'
+[2020-10-12 14:42:09Z INFO CommandSettings] Command 'warmup': 'False'
+[2020-10-12 14:42:09Z INFO ConfigurationManager] LoadSettings
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsConfigured()
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsConfigured: True
+[2020-10-12 14:42:09Z INFO ConfigurationManager] Is configured: True
+[2020-10-12 14:42:09Z INFO ConfigurationStore] Read setting file: 321 chars
+[2020-10-12 14:42:09Z INFO ConfigurationManager] Settings Loaded
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-10-12 14:42:09Z INFO CommandSettings] Command 'run': 'True'
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsConfigured()
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsConfigured: True
+[2020-10-12 14:42:09Z INFO ConfigurationManager] Is configured: True
+[2020-10-12 14:42:09Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2020-10-12 14:42:09Z INFO Runner] Set runner startup type - Manual
+[2020-10-12 14:42:09Z INFO CommandSettings] Flag 'once': 'False'
+[2020-10-12 14:42:09Z INFO Runner] RunAsync
+[2020-10-12 14:42:09Z INFO ConfigurationManager] LoadSettings
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsConfigured()
+[2020-10-12 14:42:09Z INFO ConfigurationStore] IsConfigured: True
+[2020-10-12 14:42:09Z INFO ConfigurationManager] Is configured: True
+[2020-10-12 14:42:09Z INFO ConfigurationManager] Settings Loaded
+[2020-10-12 14:42:09Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "covid-19-react-app",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/DBZEvyt5fDCn9dR5jkv6ugAMSJvjTGyShFtRXIfE6A2XVT5sCS",
+  "GitHubUrl": "https://github.com/irfan87/covid_19_malaysia",
+  "WorkFolder": "covid-19-react-app"
+}
+[2020-10-12 14:42:09Z INFO MessageListener] Loading Credentials
+[2020-10-12 14:42:09Z INFO ConfigurationStore] HasCredentials()
+[2020-10-12 14:42:09Z INFO ConfigurationStore] stored True
+[2020-10-12 14:42:09Z INFO CredentialManager] GetCredentialProvider
+[2020-10-12 14:42:09Z INFO CredentialManager] Creating type OAuth
+[2020-10-12 14:42:09Z INFO CredentialManager] Creating credential type: OAuth
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner'
+[2020-10-12 14:42:09Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_rsaparams'
+[2020-10-12 14:42:09Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_rsaparams
+[2020-10-12 14:42:09Z INFO MessageListener] Attempt to create session.
+[2020-10-12 14:42:09Z INFO MessageListener] Connecting to the Runner Server...
+[2020-10-12 14:42:09Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2020-10-12 14:42:09Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-10-12 14:42:09Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-10-12 14:42:09Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-10-12 14:42:09Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-10-12 14:42:09Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-10-12 14:42:10Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-10-12 14:42:10Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-10-12 14:42:10Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-10-12 14:42:11Z INFO MessageListener] VssConnection created
+[2020-10-12 14:42:11Z INFO Terminal] WRITE LINE: 
+[2020-10-12 14:42:11Z INFO Terminal] WRITE LINE: 
+[2020-10-12 14:42:11Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: 1e5f6cff-3521-407c-8981-664c093f5566
+ActivityId: 893a797b-fd66-4dbb-8e27-0fe68cf186bb
+X-TFS-Session: 8b5c6c92-7587-4ca4-97ec-f3ee61489d62
+X-VSS-E2EID: 92c88d53-5516-49bb-8171-007aad712389
+X-VSS-SenderDeploymentId: 13a19993-c6bc-326c-afb4-32c5519f46f0
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 2F2470A6C7FF4B789CDC8368E87D2962 Ref B: KUL02EDGE0411 Ref C: 2020-10-12T14:42:12Z
+Date: Mon, 12 Oct 2020 14:42:12 GMT
+
+[2020-10-12 14:42:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_rsaparams
+[2020-10-12 14:42:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_rsaparams
+[2020-10-12 14:42:12Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-10-12 14:42:13Z INFO MessageListener] Session created.
+[2020-10-12 14:42:13Z INFO Terminal] WRITE LINE: 2020-10-12 14:42:13Z: Listening for Jobs
+[2020-10-12 14:42:13Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2020-10-12 14:42:26Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\.credentials_rsaparams
+[2020-10-12 14:42:26Z INFO MessageListener] Message '2' received from session 'a3ece093-d6fb-4b61-ac30-9e9797758b23'.
+[2020-10-12 14:42:26Z INFO JobDispatcher] Job request 2 for plan 4bf8537a-93a9-46e5-8b80-9b666e9f1338 job 006c7e6f-00a1-57ff-4d9c-5871960fc9e4 received.
+[2020-10-12 14:42:26Z INFO JobDispatcher] Pull OrchestrationId 4bf8537a-93a9-46e5-8b80-9b666e9f1338.build._14_x from JWT claims
+[2020-10-12 14:42:26Z INFO Terminal] WRITE LINE: 2020-10-12 14:42:26Z: Running job: build (14.x)
+[2020-10-12 14:42:26Z INFO JobDispatcher] Start renew job request 2 for job 006c7e6f-00a1-57ff-4d9c-5871960fc9e4.
+[2020-10-12 14:42:26Z INFO JobDispatcher] Successfully renew job request 2, job is valid till 12/10/2020 2:52:28 PM
+[2020-10-12 14:42:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper] Starting process:
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin\Runner.Worker.exe'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2172 1856'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\irfan\Documents\react_applications\covid_19_malaysia\actions-runner\bin'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2020-10-12 14:42:26Z INFO ProcessInvokerWrapper] Process started with process id 18648, waiting for process exit.
+[2020-10-12 14:42:26Z INFO JobDispatcher] Send job request message to worker for job 006c7e6f-00a1-57ff-4d9c-5871960fc9e4.
+[2020-10-12 14:42:27Z INFO JobNotification] Entering JobStarted Notification
+[2020-10-12 14:42:27Z INFO JobNotification] Entering StartMonitor
+[2020-10-12 14:43:27Z INFO JobDispatcher] Successfully renew job request 2, job is valid till 12/10/2020 2:53:28 PM
+[2020-10-12 14:44:27Z INFO JobDispatcher] Successfully renew job request 2, job is valid till 12/10/2020 2:54:28 PM
+[2020-10-12 14:45:27Z INFO JobDispatcher] Successfully renew job request 2, job is valid till 12/10/2020 2:55:29 PM
+[2020-10-12 14:45:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-10-12 14:45:44Z INFO ProcessInvokerWrapper] Finished process 18648 with exit code 102, and elapsed time 00:03:17.4775874.
+[2020-10-12 14:45:44Z INFO JobDispatcher] Worker finished for job 006c7e6f-00a1-57ff-4d9c-5871960fc9e4. Code: 102
+[2020-10-12 14:45:44Z INFO JobDispatcher] finish job request for job 006c7e6f-00a1-57ff-4d9c-5871960fc9e4 with result: Failed
+[2020-10-12 14:45:44Z INFO Terminal] WRITE LINE: 2020-10-12 14:45:44Z: Job build (14.x) completed with result: Failed
+[2020-10-12 14:45:44Z INFO JobDispatcher] Stop renew job request for job 006c7e6f-00a1-57ff-4d9c-5871960fc9e4.
+[2020-10-12 14:45:44Z INFO JobDispatcher] job renew has been canceled, stop renew job request 2.
+[2020-10-12 14:45:44Z INFO JobNotification] Entering JobCompleted Notification
+[2020-10-12 14:45:44Z INFO JobNotification] Entering EndMonitor
+[2020-10-12 15:12:42Z INFO MessageListener] No message retrieved from session 'a3ece093-d6fb-4b61-ac30-9e9797758b23' within last 30 minutes.
