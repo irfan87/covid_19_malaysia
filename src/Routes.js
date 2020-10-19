@@ -13,7 +13,7 @@ import {
 import PropTypes from "prop-types";
 
 import { MainAboutPage } from "./components/About/MainAboutPage";
-import { MainDashboardPage } from "./components/Dashboard/MainDashboardPage";
+import MainDashboardPage from "./components/Dashboard/MainDashboardPage";
 import { PageNotFound } from "./components/NoPageFound/PageNotFound";
 
 export const Routes = () => {

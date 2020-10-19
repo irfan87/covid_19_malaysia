@@ -7,3 +7,11 @@
 	padding: 3px;
 	text-align: center;
 }
+
+.country-picker {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: flex-end;
+	margin: 150px;
+}
